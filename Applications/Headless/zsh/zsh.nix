@@ -19,10 +19,4 @@
     initExtra = ''
       neofetch
                               '';
-
-
-
-  # Scripts
-  # home.file.".config/zsh/scripts".source = ./files/scripts;
-  # home.file.".config/zsh/scripts".recursive = true;
 }
