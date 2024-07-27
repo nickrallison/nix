@@ -9,7 +9,6 @@
     ../../Applications/Headless/zsh/zsh.nix
     ../../Applications/Headless/neofetch/neofetch.nix
     ../../Applications/Headless/helix/helix.nix
-    ../../Applications/Headless/helix/helix.nix
     ../../Applications/Headless/starship/starship.nix
   ];
 
