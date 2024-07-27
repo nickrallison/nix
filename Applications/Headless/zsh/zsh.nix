@@ -17,7 +17,8 @@
     };
 
     initExtra = ''
-      #neofetch
+      neofetch
+      eval "$(starship init zsh)"
     '';
   };
 }

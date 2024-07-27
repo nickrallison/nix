@@ -9,6 +9,8 @@
     ../../Applications/Headless/zsh/zsh.nix
     ../../Applications/Headless/neofetch/neofetch.nix
     ../../Applications/Headless/helix/helix.nix
+    ../../Applications/Headless/helix/helix.nix
+    ../../Applications/Headless/starship/starship.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
