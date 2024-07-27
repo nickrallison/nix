@@ -17,7 +17,6 @@
     };
 
     initExtra = ''
-      ~/.nix-profile/etc/profile.d/hm-session-vars.sh
     
       neofetch
       eval "$(starship init zsh)"
