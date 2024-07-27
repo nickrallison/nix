@@ -3,10 +3,10 @@ cd ${HOME}/.config/nix
 git pull
 hx .
 
+git add .
 darwin-rebuild switch --flake .#Nicks-MacBook-Pro
 
 gen=$(darwin-rebuild --list-generations | grep current)
 date=$(date)
-git add .
 git commit -m "$gen_$date"
 git push
