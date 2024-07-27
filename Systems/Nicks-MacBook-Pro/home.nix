@@ -8,6 +8,7 @@
     ../../Applications/Headless/eza/eza.nix
     ../../Applications/Headless/zsh/zsh.nix
     ../../Applications/Headless/neofetch/neofetch.nix
+    ../../Applications/Headless/helix/helix.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
