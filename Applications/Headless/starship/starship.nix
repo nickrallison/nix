@@ -1,6 +1,6 @@
 {
   home.file = {
-    "starship.toml".source = ../../Headless/starship/starship.toml;
+    "starship.toml".source = ../starship/starship.toml;
   };
   
   programs.starship = {
