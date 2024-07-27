@@ -1,6 +1,6 @@
 { home, ... }:
 {
-  home.file."starship.toml".source = "starship.toml";
+  home.file."starship.toml".source = starship.toml;
 
   programs.starship = {
     enable = true;
