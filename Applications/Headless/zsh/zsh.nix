@@ -17,7 +17,7 @@
     };
 
     initExtra = ''
-      neofetch
+      #neofetch
     '';
   };
 }
