@@ -1,8 +1,9 @@
-{ ... }:
+{ pkgs, ... }:
 {
-  programs.neofetch = {
-    enable = true;
-  };
+  
+  home.packages = [
+    pkgs.neofetch
+  ];
   home.file.neofetch_config = {
     source = ./config.conf;
     target = ".config/neofetch/config.conf";
