@@ -7,7 +7,7 @@
     enable = true;
     autocd = true;
     dotDir = ".config/zsh";
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     enableCompletion = true;
     shellAliases = {
       sl = "eza";
@@ -19,5 +19,5 @@
     initExtra = ''
       neofetch
     '';
-  }
+  };
 }
