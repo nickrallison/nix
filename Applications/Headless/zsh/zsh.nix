@@ -18,5 +18,6 @@
 
     initExtra = ''
       neofetch
-                              '';
+    '';
+  }
 }
