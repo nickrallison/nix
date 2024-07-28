@@ -41,5 +41,6 @@
     # Specific Tools
     pkgs.alejandra
     pkgs.nil
+    pkgs.marksman
   ];
 }
