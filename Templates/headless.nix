@@ -5,10 +5,10 @@
 {
 
   home.packages = [
-    pkgs.wget;
-    pkgs.tree;
-    pkgs.ripgrep;
-    pkgs.ripgrep-all;
+    pkgs.wget
+    pkgs.tree
+    pkgs.ripgrep
+    pkgs.ripgrep-all
   ];
 
 }
