@@ -8,7 +8,7 @@ alejandra . &> /dev/null
 git add .
 nixos-rebuild switch --flake .#WSL
 
-gen=$(nixos-rebuild list-generations | grep current)
+gen=$(exec 2> /dev/null; nixos-rebuild list-generations | grep current)
 date=$(date)
 git commit -m "$gen_$date"
 git push
