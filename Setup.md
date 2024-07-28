@@ -29,5 +29,14 @@ sudo nixos-rebuild switch --flake .#WSL
 
 ## Post Setup
 
+1. Setup git with credentials
+```sh
+git config --global credential.helper store
+git add .
+git commit -m "init system"
+git push
+```
+ - System will prompt for credentials, afterwards they should be saved
+
 Initialize Tailscale
 Initialize Atuin
