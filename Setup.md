@@ -1,7 +1,6 @@
 # Darwin:
 ...
 
-
 # WSL
 
 ## Prerequisites
