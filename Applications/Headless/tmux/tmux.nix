@@ -31,7 +31,7 @@
       set -g pane-active-border-style 'fg=colour3'
 
       # statusbar
-      set -g tmux_conf_theme_terminal_title="#h #S #I #W"
+      set -g tmux_conf_theme_terminal_title=#S #I #W
 
       set -g status-position bottom
       set -g status-justify left
