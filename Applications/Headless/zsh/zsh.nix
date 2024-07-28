@@ -16,7 +16,7 @@
       la = "eza -la";
 
       update = "sh $HOME/.local/bin/update";
-      rebuild = "sh $HOME/.local/bin/rebuild"
+      rebuild = "sh $HOME/.local/bin/rebuild";
       
     };
 
