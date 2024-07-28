@@ -1,9 +1,13 @@
+# starship.nix
 {
-  home.file = {
-    "starship.toml".source = ./starship.toml;
-  };
-
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   programs.starship = {
     enable = true;
+    enableZshIntegration = true;
+    settings = builtins.fromTOML (builtins.readFile ./starship.toml);
   };
 }
