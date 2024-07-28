@@ -1,6 +1,6 @@
 {
   home.file = {
-    "starship.toml".source = ../tmux/tmux.conf;
+    "tmux.conf".source = ../tmux/tmux.conf;
   };
   
   programs.tmux = {
