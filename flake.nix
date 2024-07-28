@@ -46,8 +46,6 @@
     # darwinPackages = self.darwinConfigurations."Nicks-MacBook-Pro".pkgs;
 
     ##### NixOS WSL setup ####
-    # Initial Build with:
-    # $ sudo nixos-rebuild switch --flake .#WSL
     # Build flake using:
     # $ sudo nixos-rebuild switch --flake .#WSL
     nixosConfigurations."WSL" = nixpkgs.lib.nixosSystem {

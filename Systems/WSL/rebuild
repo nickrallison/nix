@@ -5,9 +5,9 @@ git pull
 alejandra . &> /dev/null
 
 git add .
-nixos-rebuild switch --flake .#WSL
+sudo nixos-rebuild switch --flake .#WSL
 
-gen=$(darwin-rebuild --list-generations | grep current)
+gen=$(nixos-rebuild list-generations | grep current)
 date=$(date)
 git commit -m "$gen_$date"
 git push
