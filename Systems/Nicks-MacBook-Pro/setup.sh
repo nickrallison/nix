@@ -21,3 +21,10 @@ cd ${HOME}/.config/nix/Systems/Nicks-MacBook-Pro;
 mkdir -p ${HOME}/.local/bin
 ln -s ${HOME}/.config/nix/Systems/Nicks-MacBook-Pro/rebuild ${HOME}/.local/bin/rebuild
 
+# Initial Build command without flakes enabled
+
+
+# Post Setup:
+# Configure tailscale
+# Login to atuin
+
