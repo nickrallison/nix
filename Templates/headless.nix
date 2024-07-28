@@ -5,12 +5,12 @@
   ...
 }: {
   imports = [
-    ../../Applications/Headless/zsh/zsh.nix
-    ../../Applications/Headless/helix/helix.nix
-    ../../Applications/Headless/starship/starship.nix
-    ../../Applications/Headless/tmux/tmux.nix
-    ../../Applications/Headless/git/git.nix
-    ../../Applications/Headless/atuin/atuin.nix
+    ../Applications/Headless/zsh/zsh.nix
+    ../Applications/Headless/helix/helix.nix
+    ../Applications/Headless/starship/starship.nix
+    ../Applications/Headless/tmux/tmux.nix
+    ../Applications/Headless/git/git.nix
+    ../Applications/Headless/atuin/atuin.nix
   ];
 
   home.packages = [
