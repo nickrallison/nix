@@ -39,4 +39,12 @@ git push
  - System will prompt for credentials, afterwards they should be saved
 
 Initialize Tailscale
+```sh
+sudo tailscale up
+```
+
 Initialize Atuin
+```sh
+atuin login
+atuin sync -f
+```
