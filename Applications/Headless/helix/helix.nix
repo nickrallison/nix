@@ -15,12 +15,14 @@
         true-color = true;
       };
     };
-    languages.language = [{name = "nix";}];
     themes = {
       autumn_night_transparent = {
         "inherits" = "autumn_night";
         "ui.background" = {};
       };
     };
+    defaultEditor = true;
   };
+
+  home.file.".config/helix/runtime".source = "./runtime";
 }

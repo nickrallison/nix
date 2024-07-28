@@ -47,7 +47,7 @@
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
-    "starship.toml".source = ../../Applications/Headless/starship/starship.toml;
+    # "starship.toml".source = ../../Applications/Headless/starship/starship.toml;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
