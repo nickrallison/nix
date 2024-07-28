@@ -17,7 +17,15 @@
       l = "eza -l";
       la = "eza -la";
 
+      cat = "bat";
+
       cd = "z";
+
+      sed = "perl -pe";
+
+      sedi = "perl -p -i -e";
+
+      man = "tldr";
 
       update = "sh $HOME/.local/bin/update";
       rebuild = "sh $HOME/.local/bin/rebuild";
