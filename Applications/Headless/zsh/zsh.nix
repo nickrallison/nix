@@ -19,8 +19,6 @@
       cat = "bat";
       cd = "z";
       find = "fd";
-      sed = "perl -pe";
-      sedi = "perl -p -i -e";
       man = "tldr";
 
       update = "sh $HOME/.local/bin/update";
@@ -35,9 +33,9 @@
         tmux new-session -A -s home
       fi
 
-      neofetch
-      eval "$(zoxide init zsh)"
-      eval "$(atuin init zsh)"
+      fastfetch
+      # eval "$(zoxide init zsh)"
+      # eval "$(atuin init zsh)"
       # eval "$(starship init zsh)"
     '';
   };
