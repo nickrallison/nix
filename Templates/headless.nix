@@ -15,6 +15,7 @@
     pkgs.fzf
     pkgs.neofetch
     pkgs.delta
+    pkgs.gitui
 
     # Replacements
     pkgs.eza
