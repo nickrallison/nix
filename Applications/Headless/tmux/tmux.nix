@@ -11,5 +11,5 @@
       set -g mouse on
       set-option -g history-limit 20000
   '';
-  }
+  };
 }
