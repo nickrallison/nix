@@ -1,6 +1,6 @@
 {
   home.file = {
-    "tmux.conf".source = ../tmux/tmux.conf;
+    "tmux1.conf".source = ../tmux/tmux.conf;
   };
   
   programs.tmux = {
