@@ -16,7 +16,10 @@
     home-manager,
     ...
   }: {
-    # Build darwin flake using:
+    ##### Nix Darwin Setup ####i
+    # Initial Build with:
+    # $ darwin-rebuild build --flake .#Nicks-MacBook-Pro --experimental-features 'nix-command flakes'
+    # Rebuild darwin flake using:
     # $ darwin-rebuild build --flake .#Nicks-MacBook-Pro
     darwinConfigurations."Nicks-MacBook-Pro" = nix-darwin.lib.darwinSystem {
       modules = [
@@ -34,6 +37,31 @@
     };
 
     # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations."Nicks-MacBook-Pro".pkgs;
+    # darwinPackages = self.darwinConfigurations."Nicks-MacBook-Pro".pkgs;
+
+    ##### NixOS WSL setup ####
+    # Initial Build with:
+    # $ nixos-rebuild build --flake .#WSL --experimental-features 'nix-command flakes'
+    # Build flake using:
+    # $ nixos-rebuild build --flake .#WSL
+    nixosConfigurations."WSL" = nixpkgs.lib.nixosSystem {
+      # Note that you cannot put arbitrary configuration here: the configuration must be placed in the files loaded via modules
+      system = "x86_64-linux";
+      modules = [
+        ./Systems/WSL/configuration.nix
+        home-manager.modules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.nick = import ./Systems/WSL/home.nix;
+
+          # Optionally, use home-manager.extraSpecialArgs to pass
+          # arguments to home.nix
+        }
+      ];
+   
+          
+    };
+
   };
 }

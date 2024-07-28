@@ -1,0 +1,13 @@
+
+cd ${HOME}/.config/nix
+git pull
+
+alejandra . &> /dev/null
+
+git add .
+nixos-rebuild switch --flake .#WSL
+
+gen=$(darwin-rebuild --list-generations | grep current)
+date=$(date)
+git commit -m "$gen_$date"
+git push
