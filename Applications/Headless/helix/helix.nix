@@ -24,5 +24,5 @@
     defaultEditor = true;
   };
 
-  home.file.".config/helix/runtime".source = "./runtime";
+  home.file.".config/helix/runtime".source = ./runtime;
 }
