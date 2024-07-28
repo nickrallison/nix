@@ -40,7 +40,7 @@
       set -g status-left-length 10
 
       setw -g window-status-current-style 'fg=colour0 bg=colour1 bold'
-      setw -g window-status-current-format ' #I #W #F '
+      setw -g window-status-current-format '#{circled_session_name} #I #W #F '
 
       setw -g window-status-style 'fg=colour1 dim'
       setw -g window-status-format ' #I #[fg=colour7]#W #[fg=colour1]#F '
