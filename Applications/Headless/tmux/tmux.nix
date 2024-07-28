@@ -31,8 +31,6 @@
       set -g pane-active-border-style 'fg=colour3'
 
       # statusbar
-      set -g tmux_conf_theme_terminal_title=#S #I #W
-
       set -g status-position bottom
       set -g status-justify left
       set -g status-style 'fg=colour1'
@@ -42,10 +40,10 @@
       set -g status-left-length 10
 
       setw -g window-status-current-style 'fg=colour0 bg=colour1 bold'
-      setw -g window-status-current-format '#I #W #F '
+      setw -g window-status-current-format '#S #I #W #F '
 
       setw -g window-status-style 'fg=colour1 dim'
-      setw -g window-status-format ' #I #[fg=colour7]#W #[fg=colour1]#F '
+      setw -g window-status-format ' #S #I #[fg=colour7]#W #[fg=colour1]#F '
 
       setw -g window-status-bell-style 'fg=colour2 bg=colour1 bold'
 
