@@ -6,7 +6,7 @@ hx .
 alejandra . &> /dev/null
 
 git add .
-nixos-rebuild switch --flake .#WSL
+sudo nixos-rebuild switch --flake .#WSL
 
 machine=wsl
 gen=$(exec 2> /dev/null; nixos-rebuild list-generations | grep current)
