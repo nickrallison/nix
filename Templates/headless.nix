@@ -9,6 +9,7 @@
     pkgs.tree
     pkgs.ripgrep
     pkgs.ripgrep-all
+    pkgs.alejandra
   ];
 
 }
