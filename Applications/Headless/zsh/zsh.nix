@@ -15,6 +15,8 @@
       l = "eza -l";
       la = "eza -la";
 
+      cd = "z";
+      
       update = "sh $HOME/.local/bin/update";
       rebuild = "sh $HOME/.local/bin/rebuild";
       
