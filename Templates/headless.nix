@@ -8,6 +8,7 @@
     # Basic Packages
     pkgs.wget
     pkgs.tree
+    pkgs.perl
 
     # Niceties
     pkgs.ripgrep
@@ -24,7 +25,10 @@
     pkgs.fd
     pkgs.tldr
 
-    # Specific TOols
+    # Dev Tools
+    pkgs.cargo
+
+    # Specific Tools
     pkgs.alejandra
   ];
 }
