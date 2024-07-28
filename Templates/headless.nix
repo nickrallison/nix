@@ -44,5 +44,6 @@
     pkgs.marksman
     pkgs.taplo
     pkgs.yaml-language-server
+    pkgs.nodePackages_latest.bash-language-server
   ];
 }
