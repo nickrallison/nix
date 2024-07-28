@@ -7,10 +7,15 @@
   imports = [
     ../../Applications/Headless/eza/eza.nix
     ../../Applications/Headless/zsh/zsh.nix
+    ../../Applications/Headless/fzf/fzf.nix
+    ../../Applications/Headless/zoxide/zoxide.nix
     ../../Applications/Headless/neofetch/neofetch.nix
     ../../Applications/Headless/helix/helix.nix
     ../../Applications/Headless/starship/starship.nix
+    
+    ../../Templates/headless.nix
   ];
+  
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
