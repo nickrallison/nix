@@ -10,7 +10,7 @@
     settings = {
       auto_sync = true;
       sync_frequency = "5m";
-      sync_address = "https://100.98.101.100:8888";
+      sync_address = "http://100.98.101.100:8888";
     };
   };
 }
