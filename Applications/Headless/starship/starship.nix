@@ -1,6 +1,6 @@
 {
   home.file = {
-    "starship.toml".source = ../starship/starship.toml;
+    "starship.toml".source = ./starship.toml;
   };
 
   programs.starship = {
