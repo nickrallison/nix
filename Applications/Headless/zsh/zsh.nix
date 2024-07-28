@@ -14,6 +14,10 @@
       ls = "eza";
       l = "eza -l";
       la = "eza -la";
+
+      update = "sh $HOME/.local/bin/update";
+      rebuild = "sh $HOME/.local/bin/rebuild"
+      
     };
 
     initExtra = ''
