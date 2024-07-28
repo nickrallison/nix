@@ -15,13 +15,13 @@
     pkgs.fzf
     pkgs.neofetch
     pkgs.delta
-    pkgs.fd
-    pkgs.tldr
 
     # Replacements
     pkgs.eza
     pkgs.zoxide
     pkgs.bat
+    pkgs.fd
+    pkgs.tldr
 
     # Specific TOols
     pkgs.alejandra

@@ -16,15 +16,11 @@
       ls = "eza";
       l = "eza -l";
       la = "eza -la";
-
       cat = "bat";
-
       cd = "z";
-
+      find = "fd";
       sed = "perl -pe";
-
       sedi = "perl -p -i -e";
-
       man = "tldr";
 
       update = "sh $HOME/.local/bin/update";
