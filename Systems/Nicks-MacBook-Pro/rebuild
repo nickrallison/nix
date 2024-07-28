@@ -1,7 +1,6 @@
 
 cd ${HOME}/.config/nix
 git pull
-hx .
 
 git add .
 darwin-rebuild switch --flake .#Nicks-MacBook-Pro

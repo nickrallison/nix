@@ -21,7 +21,11 @@
     };
 
     initExtra = ''
-    
+
+      if [[ "$TMUX" == "" ]]; then
+        tmux new-session -A -s home
+      fi
+
       neofetch
       eval "$(zoxide init zsh)"
       eval "$(starship init zsh)"

@@ -12,6 +12,9 @@
     ../../Applications/Headless/neofetch/neofetch.nix
     ../../Applications/Headless/helix/helix.nix
     ../../Applications/Headless/starship/starship.nix
+    ../../Applications/Headless/tmux/tmux.nix
+    ../../Applications/Headless/git/git.nix
+    ../../Applications/Headless/atuin/atuin.nix
     
     ../../Templates/headless.nix
   ];
