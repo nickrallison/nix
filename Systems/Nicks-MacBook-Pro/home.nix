@@ -10,7 +10,7 @@
     ../../Applications/Headless/starship/starship.nix
     ../../Applications/Headless/tmux/tmux.nix
     ../../Applications/Headless/git/git.nix
-    # ../../Applications/Headless/atuin/atuin.nix
+    ../../Applications/Headless/atuin/atuin.nix
 
     ../../Templates/headless.nix
   ];
