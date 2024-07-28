@@ -5,11 +5,7 @@
   ...
 }: {
   imports = [
-    ../../Applications/Headless/eza/eza.nix
     ../../Applications/Headless/zsh/zsh.nix
-    ../../Applications/Headless/fzf/fzf.nix
-    ../../Applications/Headless/zoxide/zoxide.nix
-    ../../Applications/Headless/neofetch/neofetch.nix
     ../../Applications/Headless/helix/helix.nix
     ../../Applications/Headless/starship/starship.nix
     ../../Applications/Headless/tmux/tmux.nix
