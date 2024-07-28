@@ -36,9 +36,6 @@
     pkgs.tldr
 
     # Dev Tools
-    pkgs.rustc
-    pkgs.cargo
-    pkgs.rustfmt
     pkgs.rust-analyzer
     pkgs.clippy
 
