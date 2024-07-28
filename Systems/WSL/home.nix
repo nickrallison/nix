@@ -75,7 +75,7 @@
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
     EDITOR = "hx";
-    HOME = /Users/nick;
+    HOME = /home/nixos;
   };
 
   # Let Home Manager install and manage itself.

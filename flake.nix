@@ -3,10 +3,15 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    darwin.url = "github:lnl7/nix-darwin";
-    darwin.inputs.nixpkgs.follows = "nixpkgs";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    darwin = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixos-wsl = {
+      url = "github:nix-community/nixos-wsl";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -14,13 +19,14 @@
     nix-darwin,
     nixpkgs,
     home-manager,
+    nixos-wsl,
     ...
   }: {
     ##### Nix Darwin Setup ####i
     # Initial Build with:
-    # $ darwin-rebuild build --flake .#Nicks-MacBook-Pro --experimental-features 'nix-command flakes'
+    # $ darwin-rebuild switch --flake .#Nicks-MacBook-Pro --experimental-features 'nix-command flakes'
     # Rebuild darwin flake using:
-    # $ darwin-rebuild build --flake .#Nicks-MacBook-Pro
+    # $ darwin-rebuild switch --flake .#Nicks-MacBook-Pro
     darwinConfigurations."Nicks-MacBook-Pro" = nix-darwin.lib.darwinSystem {
       modules = [
         ./Systems/Nicks-MacBook-Pro/darwin-configuration.nix
@@ -41,27 +47,25 @@
 
     ##### NixOS WSL setup ####
     # Initial Build with:
-    # $ nixos-rebuild build --flake .#WSL --experimental-features 'nix-command flakes'
+    # $ sudo nixos-rebuild switch --flake .#WSL
     # Build flake using:
-    # $ nixos-rebuild build --flake .#WSL
+    # $ sudo nixos-rebuild switch --flake .#WSL
     nixosConfigurations."WSL" = nixpkgs.lib.nixosSystem {
       # Note that you cannot put arbitrary configuration here: the configuration must be placed in the files loaded via modules
       system = "x86_64-linux";
       modules = [
         ./Systems/WSL/configuration.nix
-        home-manager.modules.home-manager
+        nixos-wsl.nixosModules.wsl
+        home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.nick = import ./Systems/WSL/home.nix;
+          home-manager.users.nixos = import ./Systems/WSL/home.nix;
 
           # Optionally, use home-manager.extraSpecialArgs to pass
           # arguments to home.nix
         }
       ];
-   
-          
     };
-
   };
 }

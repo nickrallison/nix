@@ -16,5 +16,5 @@ mkdir -p ./Systems/WSL
 cp /etc/nixos/* ./Systems/WSL/
 
 # First Install Build
-nixos-rebuild switch --flake .#WSL --experimental-features 'nix-command flakes'
+sudo nixos-rebuild switch --flake .#WSL 
 ```
