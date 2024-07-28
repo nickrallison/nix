@@ -1,8 +1,10 @@
 # home manager - zsh.nix
-
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   programs.zsh = {
     enable = true;
     autocd = true;
@@ -16,10 +18,9 @@
       la = "eza -la";
 
       cd = "z";
-      
+
       update = "sh $HOME/.local/bin/update";
       rebuild = "sh $HOME/.local/bin/rebuild";
-      
     };
 
     initExtra = ''

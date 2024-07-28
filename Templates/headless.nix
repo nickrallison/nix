@@ -1,9 +1,9 @@
 # headless.nix
-
-{ config, pkgs, ... }:
-
 {
-
+  config,
+  pkgs,
+  ...
+}: {
   home.packages = [
     pkgs.wget
     pkgs.tree
@@ -11,5 +11,4 @@
     pkgs.ripgrep-all
     pkgs.alejandra
   ];
-
 }

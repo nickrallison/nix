@@ -1,8 +1,5 @@
-{ pkgs, ... }:
-{
-  
+{pkgs, ...}: {
   home.packages = [
     pkgs.zoxide
   ];
 }
-

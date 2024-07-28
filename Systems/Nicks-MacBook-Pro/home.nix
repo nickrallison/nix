@@ -1,9 +1,9 @@
 # home.nix
-
-{ config, pkgs, ... }:
-
 {
-
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ../../Applications/Headless/eza/eza.nix
     ../../Applications/Headless/zsh/zsh.nix
@@ -15,10 +15,9 @@
     ../../Applications/Headless/tmux/tmux.nix
     ../../Applications/Headless/git/git.nix
     ../../Applications/Headless/atuin/atuin.nix
-    
+
     ../../Templates/headless.nix
   ];
-  
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -51,7 +50,6 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
