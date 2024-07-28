@@ -11,6 +11,7 @@
     ../Applications/Headless/tmux/tmux.nix
     ../Applications/Headless/git/git.nix
     ../Applications/Headless/atuin/atuin.nix
+    ../Applications/Headless/zoxide/zoxide.nix
   ];
 
   home.packages = [
