@@ -25,6 +25,8 @@
 
       update = "sh $HOME/.local/bin/update";
       rebuild = "sh $HOME/.local/bin/rebuild";
+
+      sshunraid = "ssh -p 7149 'root@192.168.68.57'";
     };
 
     initExtra = ''
