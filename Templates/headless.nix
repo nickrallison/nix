@@ -23,7 +23,7 @@
     pkgs.ripgrep
     pkgs.ripgrep-all
     pkgs.fzf
-    pkgs.neofetch
+    pkgs.fastfetch
     pkgs.delta
     pkgs.gitui
 
