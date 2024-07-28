@@ -42,5 +42,7 @@
     pkgs.alejandra
     pkgs.nil
     pkgs.marksman
+    pkgs.taplo
+    pkgs.yaml-language-server
   ];
 }
