@@ -42,8 +42,6 @@
       ];
     };
 
-    # Expose the package set, including overlays, for convenience.
-    # darwinPackages = self.darwinConfigurations."Nicks-MacBook-Pro".pkgs;
 
     ##### NixOS WSL setup ####
     # Build flake using:
@@ -59,6 +57,22 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.nixos = import ./Systems/WSL/home.nix;
+
+          # Optionally, use home-manager.extraSpecialArgs to pass
+          # arguments to home.nix
+        }
+      ];
+    };
+    nixosConfigurations."VM" = nixpkgs.lib.nixosSystem {
+      # Note that you cannot put arbitrary configuration here: the configuration must be placed in the files loaded via modules
+      system = "x86_64-linux";
+      modules = [
+        ./Systems/VM/configuration.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.nixos = import ./Systems/VM/home.nix;
 
           # Optionally, use home-manager.extraSpecialArgs to pass
           # arguments to home.nix

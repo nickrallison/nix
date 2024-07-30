@@ -1,0 +1,15 @@
+
+cd ${HOME}/.config/nix
+git pull
+hx .
+
+alejandra . &> /dev/null
+
+git add .
+sudo nixos-rebuild switch --flake .#VM
+
+machine=vm
+gen=$(exec 2> /dev/null; nixos-rebuild list-generations | grep current)
+date=$(date)
+git commit -m "$machine_$gen_$date"
+git push
