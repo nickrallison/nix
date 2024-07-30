@@ -25,7 +25,7 @@
       rebuild = "sh $HOME/.local/bin/rebuild";
 
       sshunraid = "ssh -p 7149 'root@192.168.68.57'";
-      sshnix = "ssh         'nick@100.118.225.61'";
+      sshnix = "ssh nick@100.118.225.61";
     };
 
     initExtra = ''
