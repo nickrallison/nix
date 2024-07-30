@@ -15,7 +15,7 @@
       set -g mouse on
       set-option -g history-limit 20000
 
-      set -g default-shell /etc/profiles/${config.home.username}/nixos/bin/zsh
+      set -g default-shell /etc/profiles/${config.home.username}/bin/zsh
 
       # DESIGN TWEAKS
 
