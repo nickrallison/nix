@@ -26,6 +26,7 @@
 
       sshunraid = "ssh -p 7149 'root@192.168.68.57'";
       sshnix = "ssh nick@192.168.68.71";
+      sshubuntu = "ssh nick@192.168.68.73";
     };
 
     initExtra = ''
