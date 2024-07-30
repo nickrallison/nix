@@ -1,4 +1,8 @@
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.tmux = {
     enable = true;
     extraConfig = ''
@@ -11,7 +15,7 @@
       set -g mouse on
       set-option -g history-limit 20000
 
-      set -g default-shell zsh
+      set -g default-shell /etc/profiles/${config.home.username}/nixos/bin/zsh
 
       # DESIGN TWEAKS
 
