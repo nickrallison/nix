@@ -42,7 +42,6 @@
       ];
     };
 
-
     ##### NixOS WSL setup ####
     # Build flake using:
     # $ sudo nixos-rebuild switch --flake .#WSL
