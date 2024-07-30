@@ -11,6 +11,8 @@
       set -g mouse on
       set-option -g history-limit 20000
 
+      set -g default-shell zsh
+
       # DESIGN TWEAKS
 
       # don't do anything when a 'bell' rings

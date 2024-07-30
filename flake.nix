@@ -71,7 +71,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.nixos = import ./Systems/VM/home.nix;
+          home-manager.users.nick = import ./Systems/VM/home.nix;
 
           # Optionally, use home-manager.extraSpecialArgs to pass
           # arguments to home.nix
