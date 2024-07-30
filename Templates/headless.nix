@@ -27,6 +27,7 @@
     pkgs.fastfetch
     pkgs.delta
     pkgs.gitui
+    pkgs.nvim
 
     # Replacements
     pkgs.eza
