@@ -48,6 +48,7 @@
     (
       if !pkgs.stdenv.isAarch64 || !pkgs.stdenv.isDarwin
       then pkgs.gcc_multi
+      else {}
     )
 
     # Specific Tools
