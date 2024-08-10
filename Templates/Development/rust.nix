@@ -17,6 +17,11 @@
     pkgs.clippy
 
     # Conditionally include gcc_multi
-    (pkgs.lib.optional (!pkgs.stdenv.isAarch64 || !pkgs.stdenv.isDarwin) pkgs.gcc_multi)
+    (
+      if !pkgs.stdenv.isAarch64 || !pkgs.stdenv.isDarwin
+      then pkgs.gcc_multi
+      # need a useless package
+      else pkgs.gnugrep
+    )
   ];
 }
