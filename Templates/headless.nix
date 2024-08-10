@@ -46,9 +46,8 @@
     # pkgs.gcc_multi
     # Conditionally include gcc_multi
     (
-      if pkgs.stdenv.isAarch64 && pkgs.stdenv.isDarwin
-      then null
-      else pkgs.gcc_multi
+      if !pkgs.stdenv.isAarch64 || !pkgs.stdenv.isDarwin
+      then pkgs.gcc_multi
     )
 
     # Specific Tools
