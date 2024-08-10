@@ -15,6 +15,7 @@
     # pkgs.perl
 
     # Niceties
+    # This one is broken as of 10-8-24
     pkgs.zed-editor
     # pkgs.ripgrep-all
     # pkgs.fzf
