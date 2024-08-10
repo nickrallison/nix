@@ -42,7 +42,14 @@
     pkgs.rustfmt
     pkgs.rust-analyzer
     pkgs.clippy
-    pkgs.gcc_multi
+
+    # pkgs.gcc_multi
+    # Conditionally include gcc_multi
+    (
+      if pkgs.stdenv.isAarch64 && pkgs.stdenv.isDarwin
+      then null
+      else pkgs.gcc_multi
+    )
 
     # Specific Tools
     pkgs.alejandra
