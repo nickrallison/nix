@@ -8,7 +8,7 @@
     ../../Templates/headless.nix
 
     ../../Templates/Development/rust.nix
-    ../../Templates/Development/verilator.nix
+    # ../../Templates/Development/verilator.nix
     # ../../Templates/gui.nix
   ];
 
