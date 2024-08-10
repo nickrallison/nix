@@ -6,6 +6,7 @@
 }: {
   imports = [
     ../../Templates/headless.nix
+    ../../Templates/Development/rust.nix
     # ../../Templates/gui.nix
   ];
 

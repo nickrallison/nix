@@ -36,22 +36,6 @@
     pkgs.fd
     pkgs.tldr
 
-    # Dev Tools
-    pkgs.rustc
-    pkgs.cargo
-    pkgs.rustfmt
-    pkgs.rust-analyzer
-    pkgs.clippy
-
-    # pkgs.gcc_multi
-    # Conditionally include gcc_multi
-    (
-      if !pkgs.stdenv.isAarch64 || !pkgs.stdenv.isDarwin
-      then pkgs.gcc_multi
-      # need a useless package
-      else pkgs.gnugrep
-    )
-
     # Specific Tools
     pkgs.alejandra
     pkgs.nil
