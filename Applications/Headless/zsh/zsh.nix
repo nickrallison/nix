@@ -24,6 +24,8 @@
       update = "sh $HOME/.local/bin/update";
       rebuild = "sh $HOME/.local/bin/rebuild";
 
+      dev = "nix develop -c $SHELL";
+
       sshunraid = "ssh -p 7149 'root@192.168.68.57'";
       sshnix = "ssh nick@192.168.68.71";
       sshubuntu = "ssh nick@192.168.68.73";
