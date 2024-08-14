@@ -48,7 +48,7 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # "starship.toml".source = ../../Applications/Headless/starship/starship.toml;
-    "FirefoxCron.sh".source = ./FirefoxCron.sh;
+    "FirefoxCron.sh".source = ./scripts/FirefoxCron.sh;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
