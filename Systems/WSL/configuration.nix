@@ -30,7 +30,8 @@
   services.cron = {
     enable = true;
     systemCronJobs = [
-      "0 0 * * *   /home/nixos/.config/nix/Systems/WSL/scripts/FirefoxCron.sh"
+      "0 0 * * *   sh /home/nixos/.config/nix/Systems/WSL/scripts/FirefoxCron.sh"
+      "0 0 * * *   sh /home/nixos/.config/nix/Systems/WSL/scripts/ObsidianCron.sh"
     ];
   };
 
