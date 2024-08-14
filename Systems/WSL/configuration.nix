@@ -27,6 +27,13 @@
   # Enable tailscale
   services.tailscale.enable = true;
 
+  services.cron = {
+    enable = true;
+    systemCronJobs = [
+      "0 0 * * *   /home/nixos/.config/nix/Systems/WSL/scripts/FirefoxCron.sh"
+    ];
+  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It's perfectly fine and recommended to leave
