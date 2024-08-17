@@ -21,6 +21,7 @@
     pkgs.perl
     pkgs.python3
     pkgs.python312Packages.pip
+    pkgs.file # contains libmagic
 
     # Niceties
     pkgs.ripgrep
