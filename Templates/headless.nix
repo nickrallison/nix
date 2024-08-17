@@ -22,6 +22,7 @@
     pkgs.python3
     pkgs.python312Packages.pip
     pkgs.file # contains libmagic
+    pkgs.nodejs_22
 
     # Niceties
     pkgs.ripgrep
