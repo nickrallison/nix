@@ -19,7 +19,7 @@
     pkgs.wget
     pkgs.tree
     pkgs.perl
-    pkgs.python
+    pkgs.python3
     pkgs.python312Packages.pdfminer-six
 
     # Niceties
