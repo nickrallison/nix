@@ -19,6 +19,8 @@
     pkgs.wget
     pkgs.tree
     pkgs.perl
+    pkgs.python3
+    pkgs.pdfminer
 
     # Niceties
     pkgs.ripgrep
