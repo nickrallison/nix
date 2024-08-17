@@ -8,6 +8,8 @@
   environment.systemPackages = [
     pkgs.vim
     pkgs.hello
+
+    pkgs.python312Packages.pdfminer-six
   ];
 
   # Use a custom configuration.nix location.
