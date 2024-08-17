@@ -20,7 +20,7 @@
     pkgs.tree
     pkgs.perl
     pkgs.python3
-    pkgs.python312Packages.pdfminer-six
+    pkgs.python312Packages.pip
 
     # Niceties
     pkgs.ripgrep
