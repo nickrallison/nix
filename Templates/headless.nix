@@ -19,7 +19,8 @@
     pkgs.wget
     pkgs.tree
     pkgs.perl
-    pkgs.python3
+    pkgs.python
+    pkgs.python312Packages.pdfminer-six
 
     # Niceties
     pkgs.ripgrep
