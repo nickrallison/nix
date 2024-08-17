@@ -30,6 +30,7 @@
     pkgs.delta
     pkgs.gitui
     pkgs.neovim
+    pkgs.ffmpeg_7-headless
 
     # Replacements
     pkgs.eza
