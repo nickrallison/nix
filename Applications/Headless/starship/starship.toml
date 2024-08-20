@@ -12,7 +12,7 @@ $rust\
 $golang\
 $php\
 [](fg:#212736 bg:#1d2230)\
-$time\
+$shlvl\
 [ ](fg:#1d2230)\
 \n$character"""
 
@@ -62,3 +62,4 @@ disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#1d2230"
 format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+

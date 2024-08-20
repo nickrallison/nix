@@ -37,8 +37,6 @@
         tmux new-session -A -s home
       fi
 
-      export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-
       fastfetch
       # eval "$(zoxide init zsh)"
       # eval "$(atuin init zsh)"
