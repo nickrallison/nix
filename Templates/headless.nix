@@ -33,6 +33,7 @@
     pkgs.gitui
     pkgs.neovim
     pkgs.ffmpeg_7-headless
+    pkgs.btop
 
     # Replacements
     pkgs.eza
