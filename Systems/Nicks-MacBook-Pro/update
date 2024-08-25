@@ -1,7 +1,9 @@
 
+codeeditor=code
+
 cd ${HOME}/.config/nix
 git pull
-hx .
+$codeeditor .
 
 alejandra . &> /dev/null
 
