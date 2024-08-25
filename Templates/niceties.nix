@@ -26,5 +26,6 @@
     pkgs.llvmPackages_12.clang-tools
     pkgs.pandoc
     pkgs.docker_27
+    pkgs.docker-compose
   ];
 }
