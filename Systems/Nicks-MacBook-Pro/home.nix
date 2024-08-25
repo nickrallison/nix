@@ -6,10 +6,7 @@
 }: {
   imports = [
     ../../Templates/headless.nix
-
-    # ../../Templates/Development/rust.nix
-    # ../../Templates/Development/verilator.nix
-    # ../../Templates/gui.nix
+    ../../Templates/niceties.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
