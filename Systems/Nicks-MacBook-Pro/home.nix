@@ -55,6 +55,7 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+    "~/Scripts".source = ../../Scripts;
   };
 
   # You can also manage environment variables but you will have to manually
