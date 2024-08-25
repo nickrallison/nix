@@ -37,6 +37,11 @@
         tmux new-session -A -s home
       fi
 
+      # if path exists: /Library/TeX
+      export PATH="/Library/TeX/texbin:$PATH"
+
+
+
       fastfetch
       # eval "$(zoxide init zsh)"
       # eval "$(atuin init zsh)"
