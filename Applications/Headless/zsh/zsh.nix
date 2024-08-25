@@ -38,8 +38,9 @@
       fi
 
       # if path exists: /Library/TeX
-      export PATH="/Library/TeX/texbin:$PATH"
-
+      if [ -d "/Library/TeX" ]; then
+        export PATH="/Library/TeX/texbin:$PATH"
+      fi
 
 
       fastfetch
