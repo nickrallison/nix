@@ -34,13 +34,13 @@
     initExtra = ''
 
       if [[ "$TMUX" == "" ]]; then
-        tmux has-session -t $(pwd) 2>/dev/null
+        tmux has-session -t $(pwd | sed 's/\./_/g') 2>/dev/null
 
         if [ $? != 0 ]; then
-          tmux new-session -s $(pwd) -c "$(pwd)"
+          tmux new-session -s $(pwd | sed 's/\./_/g') -c "$(pwd)"
         else
-          tmux new-window -t $(pwd) -c "$(pwd)"
-          tmux attach-session -t $(pwd)
+          tmux new-window -t $(pwd | sed 's/\./_/g') -c "$(pwd)"
+          tmux attach-session -t $(pwd | sed 's/\./_/g')
         fi
         # tmux new-session -A -s home
       fi
