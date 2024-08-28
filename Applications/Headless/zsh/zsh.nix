@@ -34,7 +34,15 @@
     initExtra = ''
 
       if [[ "$TMUX" == "" ]]; then
-        tmux new-session -A -s home
+        tmux has-session -t $(pwd) 2>/dev/null
+
+        if [ $? != 0 ]; then
+          tmux new-session -s $(pwd) -c "$(pwd)"
+        else
+          tmux new-window -t $(pwd) -c "$(pwd)"
+          tmux attach-session -t $(pwd)
+        fi
+        # tmux new-session -A -s home
       fi
 
       # if path exists: /Library/TeX
