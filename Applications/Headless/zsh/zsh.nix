@@ -50,7 +50,7 @@
         export PATH="/Library/TeX/texbin:$PATH"
       fi
 
-
+      export PATH="$PATH:/opt/homebrew/bin"
       fastfetch
       # eval "$(zoxide init zsh)"
       # eval "$(atuin init zsh)"
