@@ -15,6 +15,7 @@
     pkgs.neovim
     pkgs.ffmpeg_7-headless
     pkgs.btop
+    pkgs.ncdu
 
     # Dev Packages
     pkgs.alejandra
