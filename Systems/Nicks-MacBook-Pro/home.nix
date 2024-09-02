@@ -7,6 +7,7 @@
   imports = [
     ../../Templates/headless.nix
     ../../Templates/niceties.nix
+    ../../Templates/Development/rust.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
