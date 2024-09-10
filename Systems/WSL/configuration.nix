@@ -24,6 +24,10 @@
   programs.zsh.enable = true;
   users.users.nixos.shell = pkgs.zsh;
 
+  # nix-ld
+  programs.nix-ld.enable = true;
+
+
   # Enable tailscale
   services.tailscale.enable = true;
 

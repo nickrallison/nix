@@ -92,6 +92,9 @@
   users.users.nick.shell = pkgs.zsh;
   programs.zsh.enable = true;
 
+  # nix-ld
+  programs.nix-ld.enable = true;
+
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "nick";
