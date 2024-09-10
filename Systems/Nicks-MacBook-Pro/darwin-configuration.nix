@@ -28,6 +28,13 @@
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
 
+  # services.cron = {
+  #   enable = true;
+  #   systemCronJobs = [
+  #     "0 0 * * *   sh /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/obsidian-cron.sh"
+  #   ];
+  # };
+
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = "aarch64-darwin";
 
