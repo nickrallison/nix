@@ -45,17 +45,18 @@
       #   fi
       #   # tmux new-session -A -s home
       # fi
+      if [[ "$TMUX" == "" ]]; then
+        # Get the current directory name
+        session_name=$(basename "$PWD")
 
-      # Get the current directory name
-      session_name=$(basename "$PWD")
-
-      # Check if a tmux session with the current directory name exists
-      if tmux has-session -t "$session_name" 2>/dev/null; then
-        # Attach to the existing session
-        tmux attach-session -t "$session_name"
-      else
-        # Create a new session with the current directory name
-        tmux new-session -s "$session_name"
+        # Check if a tmux session with the current directory name exists
+        if tmux has-session -t "$session_name" 2>/dev/null; then
+          # Attach to the existing session
+          tmux attach-session -t "$session_name"
+        else
+          # Create a new session with the current directory name
+          tmux new-session -s "$session_name"
+        fi
       fi
 
       # if path exists: /Library/TeX
