@@ -51,6 +51,9 @@
         export PATH="/Library/TeX/texbin:$PATH"
       fi
 
+      if [ -e "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh" ]; then
+        . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+      fi
       export PATH="$PATH:/opt/homebrew/bin"
       fastfetch
       # eval "$(zoxide init zsh)"
