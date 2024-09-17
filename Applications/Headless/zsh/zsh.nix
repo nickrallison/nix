@@ -34,16 +34,28 @@
 
     initExtra = ''
 
-      if [[ "$TMUX" == "" ]]; then
-        tmux has-session -t $(pwd | sed 's/\./_/g') 2>/dev/null
+      # if [[ "$TMUX" == "" ]]; then
+      #   tmux has-session -t $(pwd | sed 's/\./_/g') 2>/dev/null
 
-        if [ $? != 0 ]; then
-          tmux new-session -s $(pwd | sed 's/\./_/g') -c "$(pwd)"
-        else
-          tmux new-window -t $(pwd | sed 's/\./_/g') -c "$(pwd)"
-          tmux attach-session -t $(pwd | sed 's/\./_/g')
-        fi
-        # tmux new-session -A -s home
+      #   if [ $? != 0 ]; then
+      #     tmux new-session -s $(pwd | sed 's/\./_/g') -c "$(pwd)"
+      #   else
+      #     tmux new-window -t $(pwd | sed 's/\./_/g') -c "$(pwd)"
+      #     tmux attach-session -t $(pwd | sed 's/\./_/g')
+      #   fi
+      #   # tmux new-session -A -s home
+      # fi
+
+      # Get the current directory name
+      session_name=$(basename "$PWD")
+
+      # Check if a tmux session with the current directory name exists
+      if tmux has-session -t "$session_name" 2>/dev/null; then
+        # Attach to the existing session
+        tmux attach-session -t "$session_name"
+      else
+        # Create a new session with the current directory name
+        tmux new-session -s "$session_name"
       fi
 
       # if path exists: /Library/TeX
