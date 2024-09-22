@@ -25,6 +25,7 @@
     pkgs.nodejs_22
     pkgs.fastfetch
     pkgs.borgbackup
+    pkgs.rclone
 
     # Replacements
     pkgs.eza
