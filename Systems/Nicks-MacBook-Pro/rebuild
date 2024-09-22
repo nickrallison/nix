@@ -1,3 +1,6 @@
+#!/bin/sh
+
+rebuild_command=$(/bin/ls /nix/store/*-darwin-rebuild/bin/darwin-rebuild | head -n 1)
 
 cd ${HOME}/.config/nix
 git pull
@@ -5,7 +8,7 @@ git pull
 alejandra . &> /dev/null
 
 git add .
-darwin-rebuild switch --flake .#Nicks-MacBook-Pro
+${rebuild_command} switch --flake .#Nicks-MacBook-Pro
 
 machine=macbook_pro
 gen=$(darwin-rebuild --list-generations | grep current)
