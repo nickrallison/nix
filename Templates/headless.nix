@@ -24,6 +24,7 @@
     pkgs.file # contains libmagic
     pkgs.nodejs_22
     pkgs.fastfetch
+    pkgs.borgbackup
 
     # Replacements
     pkgs.eza
