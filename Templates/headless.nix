@@ -23,6 +23,7 @@
     pkgs.python312Packages.pip
     pkgs.file # contains libmagic
     pkgs.nodejs_22
+    pkgs.fastfetch
 
     # Replacements
     pkgs.eza
