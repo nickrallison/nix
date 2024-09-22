@@ -71,6 +71,7 @@
   home.sessionVariables = {
     EDITOR = "hx";
     HOME = /Users/nick;
+    LOG_DIR = /Users/nick/Logs;
   };
 
   # Let Home Manager install and manage itself.
