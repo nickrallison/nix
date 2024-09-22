@@ -59,9 +59,9 @@
       if [ -e "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh" ]; then
         . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
       fi
-      if [ -e "/etc/static/bashrc" ]; then
-        source /etc/static/bashrc
-      fi
+      # if [ -e "/etc/static/bashrc" ]; then
+        # source /etc/static/bashrc
+      # fi
       export PATH="$PATH:/opt/homebrew/bin"
       fastfetch
       # eval "$(zoxide init zsh)"
