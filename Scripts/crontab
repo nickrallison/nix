@@ -1,1 +1,4 @@
-*/10 * * * * /Users/nick/.config/nix/Scripts/rsync_bisync.sh
+# TO USE THIS CRONTAB RUN:
+# sudo crontab -u nick crontab
+
+*/10 * * * * sh /Users/nick/.config/nix/Scripts/rsync_bisync.sh >& "/Users/nick/Logs/rsync_bisync_mount/$(date)-rsync-bisync.txt"
