@@ -1,0 +1,1 @@
+*/10 * * * * /Users/nick/.config/nix/Scripts/rsync_bisync.sh
