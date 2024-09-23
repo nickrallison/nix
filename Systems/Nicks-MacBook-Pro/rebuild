@@ -11,7 +11,7 @@ git add .
 ${rebuild_command} switch --flake .#Nicks-MacBook-Pro
 
 machine=macbook_pro
-gen=$(darwin-rebuild --list-generations | grep current)
+gen=$(${rebuild_command} --list-generations | grep current)
 date=$(date)
 git commit -m "$machine_$gen_$date"
 git push
