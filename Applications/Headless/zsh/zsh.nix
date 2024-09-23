@@ -63,6 +63,7 @@
         # source /etc/static/bashrc
       # fi
       export PATH="$PATH:/opt/homebrew/bin"
+      export PATH="$PATH:/etc/profiles/per-user/nick/bin"
       fastfetch
       # eval "$(zoxide init zsh)"
       # eval "$(atuin init zsh)"
