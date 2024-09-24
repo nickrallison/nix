@@ -26,6 +26,7 @@
     pkgs.fastfetch
     pkgs.borgbackup
     pkgs.rclone
+    pkgs.unison
 
     # Replacements
     pkgs.eza
