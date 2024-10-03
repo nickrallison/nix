@@ -27,6 +27,7 @@
     pkgs.borgbackup
     pkgs.rclone
     pkgs.unison
+    pkgs.tailscale
 
     # Replacements
     pkgs.eza
