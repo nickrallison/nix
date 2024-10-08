@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #### User Set Vars ####
-MOUNT_POINT="/Users/nick/Mount/Cloud"
+MOUNT_POINT="/Users/nick/Mount/Cloud Local"
 REMOTE="unraid:/mnt/user/Cloud"
 
 #### Error if 
@@ -28,4 +28,4 @@ fi
 
 
 #### Script Logic ####
-rclone sync ${REMOTE} ${MOUNT_POINT} --progress --ignore-existing
+rclone sync ${REMOTE} "${MOUNT_POINT}" --progress --ignore-existing
