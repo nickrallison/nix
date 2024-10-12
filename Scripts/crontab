@@ -1,4 +1,6 @@
 # TO USE THIS CRONTAB RUN:
 # sudo crontab -u nick crontab
 
+# sync cloud to local folder
 */10 * * * * sh /Users/nick/.config/nix/Scripts/rclone_sync.bash >& "/Users/nick/Logs/rsync_bisync_mount.txt"
+
