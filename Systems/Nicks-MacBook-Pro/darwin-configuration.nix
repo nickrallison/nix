@@ -55,9 +55,9 @@
 
       cd "/Users/nick/Applications/Home Manager Apps/"; find . -name "*" |
       while read src; do
-        echo here 1
+        # echo here 1
         # app_name=$(basename "$src")
-        path=$src
+        path="/Users/nick/Applications/Home Manager Apps/$src"
         name=$(basename "$path" | sed 's/.app//g')
         echo $name
         echo $path
