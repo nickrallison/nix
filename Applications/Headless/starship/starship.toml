@@ -32,22 +32,10 @@ format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
 style = "bg:#394260"
 format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
 
-# [env_var]
-# symbol = ""
-# style = "bg:#212736"
-# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-
-# [env_var.SHELL]
-# variable = 'SHELL'
-# default = 'unknown shell'
-
-# [env_var.USER]
-# default = 'unknown user'
-
 [env_var.SHLVL]
 variable = 'SHLVL'
 default = 'unknown shell level'
-style = "bg:#212736"
+style = "bg:#a3aed2"
 format = '[ $env_value]($style)'
 
 # [nodejs]
