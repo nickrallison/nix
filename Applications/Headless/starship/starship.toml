@@ -50,7 +50,7 @@ format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
 variable = 'SHLVL'
 default = 'unknown shell level'
 style = "bg:#212736"
-format = 'WITH [$env_value]($style)'
+format = '[ $env_value]($style)'
 
 # [nodejs]
 # symbol = ""
