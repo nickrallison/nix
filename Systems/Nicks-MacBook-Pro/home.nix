@@ -4,12 +4,6 @@
   pkgs,
   ...
 }: {
-  # imports = [
-  #   ../../Templates/headless.nix
-  #   ../../Templates/niceties.nix
-  #   ../../Templates/Development/rust.nix
-  # ];
-
   imports = [
     ../../Applications/Headless/zsh/zsh.nix
     ../../Applications/Headless/helix/helix.nix
@@ -59,15 +53,12 @@
     pkgs.yaml-language-server
     pkgs.nodePackages_latest.bash-language-server
 
+    # Fonts
+    (pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];})
+
     # DEPR
     # pkgs.file # contains libmagic
     # pkgs.llvmPackages_12.clang-tools
-
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
