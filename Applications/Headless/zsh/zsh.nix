@@ -16,10 +16,10 @@
       ls = "eza";
       l = "eza -l";
       la = "eza -la";
-      cat = "bat";
+      # cat = "bat";
       cd = "z";
       # find = "fd";
-      man = "tldr";
+      # man = "tldr";
 
       borgmnt = "mkdir -p ~/borg-mnt; borg mount root@100.108.27.35:/mnt/remotes/onedrive/unraid_borg_backup ~/borg-mnt; realpath ~/borg-mnt";
       borgumnt = "borg umount ~/borg-mnt; rmdir ~/borg-mnt";
