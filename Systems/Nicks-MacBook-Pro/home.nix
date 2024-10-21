@@ -12,7 +12,8 @@
     ../../Applications/Headless/git/git.nix
     ../../Applications/Headless/atuin/atuin.nix
     ../../Applications/Headless/zoxide/zoxide.nix
-    ../../Applications/Headless/alacritty/alacritty.nix
+
+    ../../Applications/Gui/alacritty/alacritty.nix
 
     ../../Templates/Development/rust.nix
   ];
