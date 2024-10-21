@@ -48,10 +48,10 @@
       done
 
       # Set up hm applications.
-      echo "$HOME/Applications/Home Manager Apps" >&2
+      echo "/Users/nick/Applications/Home Manager Apps" >&2
       # rm -rf /Applications/Nix\ Apps
       # mkdir -p /Applications/Nix\ Apps
-      # cd "$HOME/Applications/Home Manager Apps/"; find . -name "*" + |
+      # cd "/Users/nick/Applications/Home Manager Apps/"; find . -name "*" + |
 
       cd "$HOME/Applications/Home Manager Apps/"; find . -name "*" |
       while read src; do
@@ -60,7 +60,9 @@
         name=$(basename "$path" | sed 's/.app//g')
         if [ -e "$path" ]; then
           [ -d "$path" ] && \
-          cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$name.icns";
+          if [ -e "$path/Contents/Resources/$name.icns" ]; then
+            cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$name.icns";
+          fi
         fi
       done
 
