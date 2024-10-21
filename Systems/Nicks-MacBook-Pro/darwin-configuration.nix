@@ -55,8 +55,6 @@
 
       cd "/Users/nick/Applications/Home Manager Apps/"; find . -name "*" |
       while read src; do
-        # echo here 1
-        # app_name=$(basename "$src")
         path="/Users/nick/Applications/Home Manager Apps/$src"
         name=$(basename "$path" | sed 's/.app//g')
         lower_name=$(echo $name | awk '{print tolower($0)}')
@@ -65,6 +63,7 @@
           [ -d "$path" ] && \
           if [ -e "/Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns" ]; then
             echo here 2
+            echo "path/Contents/Resources/$name.icns"
             cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$name.icns";
             cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$lower_name.icns";
           fi
