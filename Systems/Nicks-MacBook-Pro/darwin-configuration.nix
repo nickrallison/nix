@@ -29,6 +29,11 @@
       paths = config.environment.systemPackages;
       pathsToLink = "/Applications";
     };
+    # hmenv = pkgs.buildEnv {
+    #   name = "hm-applications";
+    #   paths = config.environment.systemPackages;
+    #   pathsToLink = "$HOME/Applications/Home Manager Apps";
+    # };
   in
     pkgs.lib.mkForce ''
       # Set up applications.
@@ -41,6 +46,24 @@
         echo "copying $src" >&2
         ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
       done
+
+      # Set up hm applications.
+      echo "$HOME/Applications/Home Manager Apps" >&2
+      # rm -rf /Applications/Nix\ Apps
+      # mkdir -p /Applications/Nix\ Apps
+      # cd "$HOME/Applications/Home Manager Apps/"; find . -name "*" + |
+
+      cd "$HOME/Applications/Home Manager Apps/"; find . -name "*" |
+      while read src; do
+        # app_name=$(basename "$src")
+        path=$src
+        name=$(basename "$path" | sed 's/.app//g')
+        if [ -e "$path" ]; then
+          [ -d "$path" ] && \
+          cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$name.icns";
+        fi
+      done
+
     '';
 
   # Auto upgrade nix package and the daemon service.
