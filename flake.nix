@@ -83,7 +83,7 @@
         #     # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.
         #     # mutableTaps = false;
         #   };
-        }
+        # }
       ];
     };
 
