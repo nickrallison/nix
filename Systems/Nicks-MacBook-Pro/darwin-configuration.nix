@@ -56,21 +56,22 @@
 
       cd "/Users/nick/Applications/Home Manager Apps/"; find . -name "*" |
       while read src; do
-        echo here 1
+        # echo here 1
         path=$(echo "/Users/nick/Applications/Home Manager Apps/$src" | sed 's@\./@@g')
-        echo $path
+        # echo $path
         name=$(basename "$path" | sed 's/.app//g' )
         lower_name=$(echo $name | awk '{print tolower($0)}')
         if [ -e "$path" ]; then
           echo here 1
           [ -d "$path" ] && \
           if [ -e "/Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns" ]; then
-            echo $lower_name
-            echo "$path/Contents/Resources/$name.icns"
+            # echo $lower_name
+            # echo "$path/Contents/Resources/$name.icns"
             # cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$name.icns"
-            cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$lower_name.icns"
-            echo 'cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$lower_name.icns"'
-            echo cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$lower_name.icns"
+            # cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$lower_name.icns"
+            # echo 'cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$lower_name.icns"'
+            # echo cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$lower_name.icns"
+            fileicon set "$path" "/Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns"
           fi
         fi
       done
