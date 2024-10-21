@@ -39,15 +39,18 @@ format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
 # style = "bg:#212736"
 # format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
-[env_var.SHELL]
-variable = 'SHELL'
-default = 'unknown shell'
+# [env_var.SHELL]
+# variable = 'SHELL'
+# default = 'unknown shell'
 
-[env_var.USER]
-default = 'unknown user'
+# [env_var.USER]
+# default = 'unknown user'
 
 [env_var.SHLVL]
+variable = 'SHLVL'
 default = 'unknown shell level'
+style = "bg:#212736"
+format = 'WITH [$env_value]($style)'
 
 # [nodejs]
 # symbol = ""
