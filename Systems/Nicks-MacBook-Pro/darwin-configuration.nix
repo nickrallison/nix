@@ -14,7 +14,7 @@
   homebrew = {
     enable = true;
     casks = [
-      "fileicon"
+      # "fileicon"
     ];
   };
 
