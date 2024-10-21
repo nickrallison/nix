@@ -24,7 +24,7 @@
       flake = false;
     };
     homebrew-bundle = {
-      url = "github:homebrew/homebrew-bundle";
+      url = "github:homebrew/bundle";
       flake = false;
     };
   };
