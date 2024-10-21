@@ -63,7 +63,7 @@
         echo $path
         if [ -e "$path" ]; then
           [ -d "$path" ] && \
-          if [ -e "$path/Contents/Resources/$name.icns" ]; then
+          if [ -e "/Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns" ]; then
             cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$name.icns";
           fi
         fi
