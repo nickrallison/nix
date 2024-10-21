@@ -24,59 +24,59 @@
     environment = "HOME=$HOME";
   };
 
-  system.activationScripts.applications.text = let
-    env = pkgs.buildEnv {
-      name = "system-applications";
-      paths = config.environment.systemPackages;
-      pathsToLink = "/Applications";
-    };
-    # hmenv = pkgs.buildEnv {
-    #   name = "hm-applications";
-    #   paths = config.environment.systemPackages;
-    #   pathsToLink = "$HOME/Applications/Home Manager Apps";
-    # };
-  in
-    pkgs.lib.mkForce ''
-      # Set up applications.
-      echo "setting up /Applications..." >&2
-      rm -rf /Applications/Nix\ Apps
-      mkdir -p /Applications/Nix\ Apps
-      find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
-      while read src; do
-        app_name=$(basename "$src")
-        echo "copying $src" >&2
-        ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
-      done
+  # system.activationScripts.applications.text = let
+  #   env = pkgs.buildEnv {
+  #     name = "system-applications";
+  #     paths = config.environment.systemPackages;
+  #     pathsToLink = "/Applications";
+  #   };
+  #   # hmenv = pkgs.buildEnv {
+  #   #   name = "hm-applications";
+  #   #   paths = config.environment.systemPackages;
+  #   #   pathsToLink = "$HOME/Applications/Home Manager Apps";
+  #   # };
+  # in
+  #   pkgs.lib.mkForce ''
+  #     # Set up applications.
+  #     echo "setting up /Applications..." >&2
+  #     rm -rf /Applications/Nix\ Apps
+  #     mkdir -p /Applications/Nix\ Apps
+  #     find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
+  #     while read src; do
+  #       app_name=$(basename "$src")
+  #       echo "copying $src" >&2
+  #       ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
+  #     done
 
-      # Set up hm applications.
-      # echo "/Users/nick/Applications/Home Manager Apps" >&2
-      # rm -rf /Applications/Nix\ Apps
-      # mkdir -p /Applications/Nix\ Apps
-      # cd "/Users/nick/Applications/Home Manager Apps/"; find . -name "*" + |
+  #     # Set up hm applications.
+  #     # echo "/Users/nick/Applications/Home Manager Apps" >&2
+  #     # rm -rf /Applications/Nix\ Apps
+  #     # mkdir -p /Applications/Nix\ Apps
+  #     # cd "/Users/nick/Applications/Home Manager Apps/"; find . -name "*" + |
 
-      cd "/Users/nick/Applications/Home Manager Apps/"; find . -name "*" |
-      while read src; do
-        # echo here 1
-        path=$(echo "/Users/nick/Applications/Home Manager Apps/$src" | sed 's@\./@@g')
-        # echo $path
-        name=$(basename "$path" | sed 's/.app//g' )
-        lower_name=$(echo $name | awk '{print tolower($0)}')
-        if [ -e "$path" ]; then
-          echo here 1
-          [ -d "$path" ] && \
-          if [ -e "/Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns" ]; then
-            # echo $lower_name
-            # echo "$path/Contents/Resources/$name.icns"
-            # cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$name.icns"
-            # cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$lower_name.icns"
-            # echo 'cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$lower_name.icns"'
-            # echo cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$lower_name.icns"
-            fileicon set "$path" "/Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns"
-          fi
-        fi
-      done
+  #     cd "/Users/nick/Applications/Home Manager Apps/"; find . -name "*" |
+  #     while read src; do
+  #       # echo here 1
+  #       path=$(echo "/Users/nick/Applications/Home Manager Apps/$src" | sed 's@\./@@g')
+  #       # echo $path
+  #       name=$(basename "$path" | sed 's/.app//g' )
+  #       lower_name=$(echo $name | awk '{print tolower($0)}')
+  #       if [ -e "$path" ]; then
+  #         echo here 1
+  #         [ -d "$path" ] && \
+  #         if [ -e "/Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns" ]; then
+  #           # echo $lower_name
+  #           # echo "$path/Contents/Resources/$name.icns"
+  #           # cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$name.icns"
+  #           # cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$lower_name.icns"
+  #           # echo 'cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$lower_name.icns"'
+  #           # echo cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$lower_name.icns"
+  #           fileicon set "$path" "/Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns"
+  #         fi
+  #       fi
+  #     done
 
-    '';
+  #   '';
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
