@@ -4,30 +4,64 @@
   pkgs,
   ...
 }: {
+  # imports = [
+  #   ../../Templates/headless.nix
+  #   ../../Templates/niceties.nix
+  #   ../../Templates/Development/rust.nix
+  # ];
+
   imports = [
-    ../../Templates/headless.nix
-    ../../Templates/niceties.nix
+    ../../Applications/Headless/zsh/zsh.nix
+    ../../Applications/Headless/helix/helix.nix
+    ../../Applications/Headless/starship/starship.nix
+    ../../Applications/Headless/tmux/tmux.nix
+    ../../Applications/Headless/git/git.nix
+    ../../Applications/Headless/atuin/atuin.nix
+    ../../Applications/Headless/zoxide/zoxide.nix
+
     ../../Templates/Development/rust.nix
   ];
 
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
-
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
   home.stateVersion = "23.05"; # Please read the comment before changing.
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # pkgs.hello
+    # Basic Packages
+    pkgs.wget
+    pkgs.tree
+    pkgs.perl
+    pkgs.python3
+    pkgs.fastfetch
+
+    # Server & Sync
+    pkgs.borgbackup
+    pkgs.rclone
+
+    # Replacements
+    pkgs.eza
+    pkgs.zoxide
+    pkgs.fd
+    pkgs.ripgrep
+    pkgs.ripgrep-all
+    pkgs.fzf
+    pkgs.gitui
+    pkgs.ncdu
+
+    pkgs.ffmpeg_7-headless
+    pkgs.pandoc
+
+    # Dev Packages
+    pkgs.alejandra
+    pkgs.nil
+    pkgs.marksman
+    pkgs.taplo
+    pkgs.yaml-language-server
+    pkgs.nodePackages_latest.bash-language-server
+
+    # DEPR
+    # pkgs.file # contains libmagic
+    # pkgs.llvmPackages_12.clang-tools
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
