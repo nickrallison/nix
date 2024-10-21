@@ -11,12 +11,12 @@
     pkgs.mkalias
   ];
 
-  # homebrew = {
-  #   enable = true;
-  #   casks = [
-  #     "verilator"
-  #   ];
-  # };
+  homebrew = {
+    enable = true;
+    casks = [
+      "verilator"
+    ];
+  };
 
   system.activationScripts.postRebuild = {
     script = "/etc/your-script.sh";
