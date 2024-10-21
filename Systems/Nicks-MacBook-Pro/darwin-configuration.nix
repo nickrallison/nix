@@ -13,7 +13,7 @@
 
   homebrew = {
     enable = true;
-    casks = [
+    brews = [
       "verilator"
     ];
   };
