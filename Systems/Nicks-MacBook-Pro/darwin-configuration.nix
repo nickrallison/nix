@@ -48,14 +48,16 @@
       done
 
       # Set up hm applications.
-      echo "/Users/nick/Applications/Home Manager Apps" >&2
+      # echo "/Users/nick/Applications/Home Manager Apps" >&2
       # rm -rf /Applications/Nix\ Apps
       # mkdir -p /Applications/Nix\ Apps
       # cd "/Users/nick/Applications/Home Manager Apps/"; find . -name "*" + |
 
       cd "/Users/nick/Applications/Home Manager Apps/"; find . -name "*" |
       while read src; do
+        echo here 1
         path=$(echo "/Users/nick/Applications/Home Manager Apps/$src" | sed 's@./@@g')
+        echo $path
         name=$(basename "$path" | sed 's/.app//g' )
         lower_name=$(echo $name | awk '{print tolower($0)}')
         if [ -e "$path" ]; then
