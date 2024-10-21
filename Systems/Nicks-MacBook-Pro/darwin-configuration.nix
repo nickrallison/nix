@@ -11,6 +11,18 @@
     pkgs.mkalias
   ];
 
+  homebrew = {
+    enable = true;
+    casks = [
+      "fileicon"
+    ];
+  };
+
+  system.activationScripts.postRebuild = {
+    script = "/etc/your-script.sh";
+    environment = "HOME=$HOME";
+  };
+
   system.activationScripts.applications.text = let
     env = pkgs.buildEnv {
       name = "system-applications";
