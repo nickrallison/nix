@@ -71,6 +71,8 @@
             # User owning the Homebrew prefix
             user = "nick";
 
+            autoMigrate = true;
+
             # Optional: Declarative tap management
             taps = {
               "homebrew/homebrew-core" = homebrew-core;
