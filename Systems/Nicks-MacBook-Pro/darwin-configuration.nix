@@ -56,7 +56,7 @@
       cd "/Users/nick/Applications/Home Manager Apps/"; find . -name "*" |
       while read src; do
         echo here 1
-        path=$(echo "/Users/nick/Applications/Home Manager Apps/$src" | sed 's@./@@g')
+        path=$(echo "/Users/nick/Applications/Home Manager Apps/$src" | sed 's@\./@@g')
         echo $path
         name=$(basename "$path" | sed 's/.app//g' )
         lower_name=$(echo $name | awk '{print tolower($0)}')
