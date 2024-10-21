@@ -72,7 +72,7 @@
             user = "nick";
 
             # Optional: Declarative tap management
-            taps = {
+            brews = {
               "homebrew/homebrew-core" = homebrew-core;
               "homebrew/homebrew-cask" = homebrew-cask;
               "homebrew/homebrew-bundle" = homebrew-bundle;
