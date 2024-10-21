@@ -55,11 +55,12 @@
 
       cd "/Users/nick/Applications/Home Manager Apps/"; find . -name "*" |
       while read src; do
-      echo here 1
-      exit 1
+        echo here 1
         # app_name=$(basename "$src")
         path=$src
         name=$(basename "$path" | sed 's/.app//g')
+        echo $name
+        echo $path
         if [ -e "$path" ]; then
           [ -d "$path" ] && \
           if [ -e "$path/Contents/Resources/$name.icns" ]; then
