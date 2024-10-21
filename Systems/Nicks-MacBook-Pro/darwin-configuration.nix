@@ -53,7 +53,7 @@
       # mkdir -p /Applications/Nix\ Apps
       # cd "/Users/nick/Applications/Home Manager Apps/"; find . -name "*" + |
 
-      cd "$HOME/Applications/Home Manager Apps/"; find . -name "*" |
+      cd "/Users/nick/Applications/Home Manager Apps/"; find . -name "*" |
       while read src; do
         # app_name=$(basename "$src")
         path=$src
