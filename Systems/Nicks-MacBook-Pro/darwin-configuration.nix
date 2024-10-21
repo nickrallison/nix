@@ -15,6 +15,7 @@
     enable = true;
     brews = [
       "verilator"
+      "fileicon"
     ];
   };
 
