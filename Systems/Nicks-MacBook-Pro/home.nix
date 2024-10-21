@@ -13,7 +13,7 @@
     ../../Applications/Headless/atuin/atuin.nix
     ../../Applications/Headless/zoxide/zoxide.nix
 
-    # ../../Applications/Gui/alacritty/alacritty.nix
+    ../../Applications/Gui/alacritty/alacritty.nix
 
     ../../Templates/Development/rust.nix
   ];
