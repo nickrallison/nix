@@ -61,8 +61,10 @@
         name=$(basename "$path" | sed 's/.app//g')
         lower_name=$(echo $name | awk '{print tolower($0)}')
         if [ -e "$path" ]; then
+          echo here 1
           [ -d "$path" ] && \
           if [ -e "/Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns" ]; then
+            echo here 2
             cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$name.icns";
             cp /Users/nick/.config/nix/Systems/Nicks-MacBook-Pro/Icons/$name.icns "$path/Contents/Resources/$lower_name.icns";
           fi
