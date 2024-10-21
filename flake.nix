@@ -63,7 +63,7 @@
         {
           nix-homebrew = {
             # Install Homebrew under the default prefix
-            enable = true;
+            enable = false;
 
             # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
             enableRosetta = true;
@@ -72,7 +72,7 @@
             user = "nick";
 
             # Optional: Declarative tap management
-            brews = {
+            taps = {
               "homebrew/homebrew-core" = homebrew-core;
               "homebrew/homebrew-cask" = homebrew-cask;
               "homebrew/homebrew-bundle" = homebrew-bundle;
