@@ -52,6 +52,7 @@
     pkgs.nil
     pkgs.marksman
     pkgs.taplo
+    pkgs.tlaplus
     pkgs.yaml-language-server
     pkgs.nodePackages_latest.bash-language-server
 
