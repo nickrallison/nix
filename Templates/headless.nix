@@ -35,5 +35,6 @@
     pkgs.bat
     pkgs.fd
     pkgs.tldr
+    pkgs.ripgrep
   ];
 }
