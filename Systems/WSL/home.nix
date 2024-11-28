@@ -16,6 +16,7 @@
     # ../../Applications/Gui/alacritty/alacritty.nix
 
     ../../Templates/Development/rust.nix
+    ../../Templates/headless.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
