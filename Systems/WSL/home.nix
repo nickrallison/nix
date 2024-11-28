@@ -4,8 +4,18 @@
   pkgs,
   ...
 }: {
-  imports = [
-    ../../Templates/headless.nix
+   imports = [
+    ../../Applications/Headless/zsh/zsh.nix
+    ../../Applications/Headless/helix/helix.nix
+    ../../Applications/Headless/starship/starship.nix
+    ../../Applications/Headless/tmux/tmux.nix
+    ../../Applications/Headless/git/git.nix
+    ../../Applications/Headless/atuin/atuin.nix
+    ../../Applications/Headless/zoxide/zoxide.nix
+
+    # ../../Applications/Gui/alacritty/alacritty.nix
+
+    ../../Templates/Development/rust.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
