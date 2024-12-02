@@ -36,5 +36,8 @@
     pkgs.fd
     pkgs.tldr
     pkgs.ripgrep
+
+    # Replacements
+    pkgs.zig
   ];
 }

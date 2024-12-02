@@ -4,3 +4,4 @@
 # sync cloud to local folder
 */10 * * * * sh /Users/nick/.config/nix/Scripts/rclone_sync.bash >& "/Users/nick/Logs/rsync_bisync_mount.txt"
 
+*/10 * * * * sh /Users/nick/.config/nix/Scripts/obsidian-cron.sh >& "/Users/nick/Logs/obsidian_cron.txt"
