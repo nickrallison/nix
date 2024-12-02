@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-   imports = [
+  imports = [
     ../../Applications/Headless/zsh/zsh.nix
     ../../Applications/Headless/helix/helix.nix
     ../../Applications/Headless/starship/starship.nix
