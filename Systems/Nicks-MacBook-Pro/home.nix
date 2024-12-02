@@ -56,6 +56,7 @@
     pkgs.yaml-language-server
     pkgs.nodePackages_latest.bash-language-server
     pkgs.nodejs_22
+    pkgs.zig
 
     # Fonts
     (pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];})
