@@ -26,6 +26,7 @@
     pkgs.fastfetch
     pkgs.borgbackup
     pkgs.rclone
+    pkgs.dos2unix
     # pkgs.unison
     # pkgs.tailscale
 
