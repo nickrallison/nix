@@ -37,6 +37,7 @@
     pkgs.fd
     pkgs.tldr
     pkgs.ripgrep
+    pkgs.android-tools
 
     # Replacements
     pkgs.zig
