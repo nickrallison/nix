@@ -16,6 +16,7 @@
     # ../../Applications/Gui/alacritty/alacritty.nix
 
     ../../Templates/Development/rust.nix
+    ../../Templates/headless.nix
   ];
 
   home.stateVersion = "23.05"; # Please read the comment before changing.
