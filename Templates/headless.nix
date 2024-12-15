@@ -27,6 +27,7 @@
     pkgs.borgbackup
     pkgs.rclone
     pkgs.dos2unix
+    pkgs.rga
     # pkgs.unison
     # pkgs.tailscale
 
