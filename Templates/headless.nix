@@ -19,7 +19,7 @@
     pkgs.wget
     pkgs.tree
     pkgs.perl
-    pkgs.python3
+    pkgs.python313
     pkgs.python312Packages.pip
     pkgs.file # contains libmagic
     pkgs.nodejs_22

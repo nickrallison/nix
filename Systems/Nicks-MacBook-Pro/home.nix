@@ -28,7 +28,7 @@
     pkgs.wget
     pkgs.tree
     pkgs.perl
-    pkgs.python3
+    pkgs.python313
     pkgs.fastfetch
 
     # Server & Sync
