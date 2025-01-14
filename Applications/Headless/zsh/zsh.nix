@@ -70,6 +70,10 @@
       # eval "$(zoxide init zsh)"
       # eval "$(atuin init zsh)"
       # eval "$(starship init zsh)"
+
+      if [ -e "~/.local/bin" ]; then
+        export PATH="$PATH:~/.local/bin"
+      fi
     '';
   };
 }
