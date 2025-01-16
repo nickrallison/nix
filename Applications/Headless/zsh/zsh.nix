@@ -33,6 +33,7 @@
       sshunraid = "ssh 'root@100.108.27.35'";
       sshnix = "ssh nick@100.118.225.61";
       sshubuntu = "ssh nick@192.168.68.73";
+      sshwin = "ssh -v desktop-oj2v1nk\\nick@100.110.130.8";
       sshcpsc = "ssh nicholas.allison@cslinux.ucalgary.ca";
     };
 
