@@ -1,14 +1,16 @@
 import subprocess
 import time
 import sys
+import os 
 
 TAILSCALE_PATH = '/Applications/Tailscale.app/Contents/MacOS/Tailscale'
+MOUNT_PATH = '/Users/nick/Mount/CloudMount'
 MOUNT_COMMAND = [
     'mount',
     '-t',
     'smbfs',
     'smb://nick:Pacemaker-Crying6-Shaky-Repeated@100.108.27.35/Cloud',
-    '/Users/nick/Mount/CloudMount'
+    MOUNT_PATH
 ]
 TIMEOUT = 120  # 2 minutes in seconds
 POLL_INTERVAL = 5  # Check every 5 seconds
@@ -54,6 +56,9 @@ def wait_for_connection():
 
 def mount_drive():
     """Mount the network drive with error handling."""
+    if os.path.ismount(MOUNT_PATH):
+        print("✅ Drive already mounted")
+        return
     try:
         subprocess.run(MOUNT_COMMAND, check=True)
         print("✅ Drive mounted successfully")
