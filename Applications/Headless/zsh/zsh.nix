@@ -29,6 +29,7 @@
       rebuild = "sh $HOME/.local/bin/rebuild";
 
       nixidea = "nix develop --command '/Users/nick/Applications/IntelliJ IDEA Ultimate.app/Contents/MacOS/idea'";
+      nixgo = "nix develop --command '/Users/nick/Applications/GoLand.app/Contents/MacOS/goland'";
 
       dev = "nix develop -c zsh";
       devdir = "git submodule update --init --recursive; cd ./nix; nix develop -c zsh; cd ..";
