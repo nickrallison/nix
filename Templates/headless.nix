@@ -29,6 +29,7 @@
     pkgs.rclone
     pkgs.dos2unix
     pkgs.ripgrep-all
+    pkgs.tailscale
 
     # Replacements
     pkgs.eza
