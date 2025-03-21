@@ -30,6 +30,7 @@
     pkgs.dos2unix
     pkgs.ripgrep-all
     pkgs.tailscale
+    # pkgs.ikos
 
     # Replacements
     pkgs.eza
