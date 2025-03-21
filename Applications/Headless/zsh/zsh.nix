@@ -73,7 +73,7 @@
       # fi
       export PATH="$PATH:/opt/homebrew/bin"
       export PATH="$PATH:/usr/local/bin"
-      export SSH_AUTH_SOCK=/Users/nick/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
+      export SSH_AUTH_SOCK=/Users/nick/.bitwarden-ssh-agent.sock
       # export PATH="$PATH:/etc/profiles/per-user/nick/bin"
       fastfetch
       # eval "$(zoxide init zsh)"
