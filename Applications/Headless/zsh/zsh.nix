@@ -29,7 +29,7 @@
       rebuild = "sh $HOME/.local/bin/rebuild";
 
       nixidea = "nix develop --command '/Users/nick/Applications/IntelliJ IDEA Ultimate.app/Contents/MacOS/idea'";
-      nixclion = "nix develop --command ' /Users/nick/Applications/CLion.app/Contents/MacOS/clion'";
+      nixclion = "nix develop --command '/Users/nick/Applications/CLion.app/Contents/MacOS/clion'";
 
       nixgo = "nix develop --command '/Users/nick/Applications/GoLand.app/Contents/MacOS/goland'";
 
