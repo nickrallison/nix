@@ -36,7 +36,7 @@
       dev = "nix develop -c zsh";
       devdir = "git submodule update --init --recursive; cd ./nix; nix develop -c zsh; cd ..";
 
-      sshubuntu = "ssh nick@100.70.42.66";
+      sshubuntu = "ssh nick@100.82.178.25";
       sshwin = "ssh desktop-oj2v1nk\\\\nick@100.110.130.8";
       sshcpsc = "ssh nicholas.allison@100.101.223.106";
       sshengg = "ssh nallison@100.88.166.10";
