@@ -131,7 +131,7 @@
       server = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs { system = "x86_64-linux"; };
         modules = [
-          ./Systems/VM/home.nix
+          ./Systems/Server/home.nix
           {
             home.username = "nick";
             home.homeDirectory = "/home/nick";
