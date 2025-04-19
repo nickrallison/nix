@@ -18,8 +18,7 @@
       la = "eza -la";
       # cat = "bat";
       cd = "z";
-      # find = "fd";
-      # man = "tldr";
+      rm = "rm -i";
       mydate = "date +\"%d-%m-%y\"";
 
       borgmnt = "mkdir -p ~/borg-mnt; borg mount root@100.108.27.35:/mnt/remotes/onedrive/unraid_borg_backup ~/borg-mnt; realpath ~/borg-mnt";
