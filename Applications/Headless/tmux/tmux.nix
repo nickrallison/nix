@@ -15,7 +15,8 @@
       set -g mouse on
       set-option -g history-limit 20000
 
-      set -g default-shell /etc/profiles/per-user/${config.home.username}/bin/zsh
+      # set -g default-shell /etc/profiles/per-user/${config.home.username}/bin/zsh
+      set -g default-shell zsh
 
       # DESIGN TWEAKS
 
