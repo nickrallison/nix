@@ -21,7 +21,7 @@
       rm = "rm -i";
       mydate = "date +\"%d-%m-%y\"";
 
-      borgmnt = "mkdir -p ~/borg-mnt; borg mount root@100.108.27.35:/mnt/remotes/onedrive/unraid_borg_backup ~/borg-mnt; realpath ~/borg-mnt";
+      borgmnt = "mkdir -p ~/borg-mnt; borg mount nick@100.82.178.25:/home/nick/OneDrive/Backups/Cloud ~/borg-mnt; realpath ~/borg-mnt";
       borgumnt = "borg umount ~/borg-mnt; rmdir ~/borg-mnt";
 
       update = "sh $HOME/.local/bin/update";
