@@ -29,4 +29,9 @@
 0 3 * * * docker exec -it qbittorrentvpn sh /config/mam.sh
 
 # ZPool Clean 3AM every sunday
-0 3 * * 0 /sbin/zpool scrub tank
+0 3 * * 0 /sbin/zpool scrub tank >> /home/nick/Logs/Zfs/tank.log 2>&1
+0 3 * * 0 /sbin/zpool scrub tank/Cloud >> /home/nick/Logs/Zfs/tank-Cloud.log 2>&1
+0 3 * * 0 /sbin/zpool scrub tank/data >> /home/nick/Logs/Zfs/tank-data.log 2>&1
+
+# Backup Cloud to Onedrive
+*/15 * * * * /home/nick/Scripts/borg.sh >> /home/nick/Logs/Borg/borg.log 2>&1
