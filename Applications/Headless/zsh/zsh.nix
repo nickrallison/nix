@@ -82,6 +82,12 @@
       if [ -e "~/.local/bin" ]; then
         export PATH="$PATH:~/.local/bin"
       fi
+      
+      if [ -e "/usr/local/cuda-12.9/bin" ]; then
+        export PATH=${PATH}:/usr/local/cuda-12.9/bin
+        export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/cuda-12.9/lib64
+      fi
+
 
     '';
   };
